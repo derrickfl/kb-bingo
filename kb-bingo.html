@@ -659,24 +659,10 @@ function renderSideMenu() {
           ),
           h('span', {class:'sm-arr'}, '›')
         )),
-        h('div', {class:'sm-item', style:{marginTop:'auto'}, onClick:doLogout},
-          h('div', {class:'sm-ic-wrap', style:{background:'rgba(255,51,68,.12)'}}, '🚪'),
-          h('div', {},
-            h('div', {class:'sm-item-main', style:{color:'var(--r)'}}, 'ውጣ'),
-            h('div', {class:'sm-item-sub'}, 'LOGOUT')
-          )
-        )
       )
     )
   );
   return menu;
-}
-
-function doLogout() {
-  state.menuOpen = false; rerenderOverlays();
-  state.user = null;
-  navTo('auth');
-  showToast('ወጥተዋል');
 }
 
 // ═══════════════════════════════════════════════════════════════
